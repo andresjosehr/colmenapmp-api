@@ -14,7 +14,7 @@
                               <tr>
                                  <td style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding:25px 0;text-align:center">
                                     <a href="http://localhost" style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';color:#3d4852;font-size:19px;font-weight:bold;text-decoration:none;display:inline-block" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://localhost&amp;source=gmail&amp;ust=1625674383900000&amp;usg=AFQjCNEKTGqqYhHGRyia898hivRhSsSZjQ">
-                                    <img src="https://ci4.googleusercontent.com/proxy/8onl_eowFGcLvCQ_2pOo8C1lXt0-ox7fuutM54YxVm8vJkXy7O53LoTG35XN80dJM3jB0a-db84=s0-d-e1-ft#http://localhost:8000/images/logo.png" alt="Super Plan" style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';max-width:100%;border:none;height:75px;width:75px" class="CToWUd">
+                                    <img src="https://ci4.googleusercontent.com/proxy/8onl_eowFGcLvCQ_2pOo8C1lXt0-ox7fuutM54YxVm8vJkXy7O53LoTG35XN80dJM3jB0a-db84=s0-d-e1-ft#http://localhost:8000/images/logo.png" alt="ColmenaPMP" style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';max-width:100%;border:none;height:75px;width:75px" class="CToWUd">
                                     </a>
                                  </td>
                               </tr>
@@ -104,7 +104,7 @@
                                                    </tbody>
                                                 </table>
                                                 {{-- <p style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size:16px;line-height:1.5em;margin-top:0;text-align:left">Si no has sido tu, cambia tu contraseña para asegurar la integridad de tu cuenta</p> --}}
-                                                <p style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size:16px;line-height:1.5em;margin-top:0;text-align:left">Equipo de soporte de super plan</p>
+                                                <p style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size:16px;line-height:1.5em;margin-top:0;text-align:left">Equipo de soporte de ColmenaPMP</p>
                                                 <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';border-top:1px solid #e8e5ef;margin-top:25px;padding-top:25px">
                                                    <tbody>
                                                       <tr>

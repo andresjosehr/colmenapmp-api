@@ -30,6 +30,6 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->subject("Tu super plan | Nuevo contacto")->view('contact');
+        return $this->subject("ColmenaPMP | Nuevo contacto")->view('contact');
     }
 }

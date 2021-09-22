@@ -48,7 +48,7 @@ class ResetPassword extends Notification
                 ->line('Confirma la solicitud dando click en el boton de abajo')
                 ->action('Cambiar contraseña', \Config::get("app.front_url")."/cambiar-password;token=".$this->token.";email=".request()->email)
                 ->line('Si no has sido tu, cambia tu contraseña para asegurar la integridad de tu cuenta')
-                ->salutation('Equipo de soporte de super plan');
+                ->salutation('Equipo de soporte de colmenapmp');
     
     }
 
