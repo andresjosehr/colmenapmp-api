@@ -29,6 +29,7 @@ class CreatePlansTable extends Migration
             $table->boolean("national")->default(false);
             $table->string("source")->nullable();
             $table->string("pdf")->nullable()->default(null);
+            $table->string("pdf_benefits")->nullable()->default(null);
             $table->timestamps();
 
             $table->index(['isapre_id', 'plan_type_id']);
