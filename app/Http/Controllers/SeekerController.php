@@ -23,6 +23,7 @@ class SeekerController extends Controller
 
     public function getPlans(Request $request)
     {
+        
         DB::enableQueryLog();
 
         ini_set('max_execution_time', 0); // 0 = Unlimited
@@ -46,20 +47,34 @@ class SeekerController extends Controller
         );
 
 
+        $regionsStringIDs = "1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21";
+        $regions = $request->regions ? $request->regions : $regionsStringIDs;
+        $regionsIDs = explode(", ", $regions);   
+
+        $providerIDsForRegion = Provider::select("id")
+                        ->whereIn("region_id", $regionsIDs)
+                        ->get();
+
+
         $providersStringIDs = "1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80";
         if($request->providers != $providersStringIDs && $request->providers!=''){
 
             $providers = $request->providers ? $request->providers : $providersStringIDs;
-            $providersIDs = explode(", ", $providers);            
-            $plansIDs = PlanProvider::select("plan_id")->whereIn("provider_id", $providersIDs)->groupBy("plan_id")
-                    ->get(); // ->get()->toArray();
+            $providersIDs = explode(", ", $providers);   
+
+
+            $plansIDs = PlanProvider::select("plan_id")
+                        ->whereIn("provider_id", $providersIDs)
+                        ->whereIn("provider_id", $providerIDsForRegion)
+                        ->groupBy("plan_id")
+                        ->get(); // ->get()->toArray();
 
             $plans=$plans->where(function($q) use ($plansIDs, $request){
                 $plantTypes = $request->planTypes ? $request->planTypes :  "1, 2, 3, 4, 5";
                 $plantTypes = str_contains($plantTypes, "2") ? 2 : 0;
                 return $q->whereIn("plans.id", $plansIDs)->orWhere("plan_type_id", $plantTypes)->orWhere(function($q2) use ($request){
-                    if($request->regionID){
-                        if($request->regionID!="4"){
+                    if($request->regions){
+                        if(str_contains($request->regions, "21")){
                             return $q2->where("plans.isapre_id", 3)->where("plans.regional", 1);
                         }
                     }
@@ -69,15 +84,11 @@ class SeekerController extends Controller
         }
 
 
-        if($request->regionID){
-            if($request->regionID!="4"){
-                $plans=$plans->where(function($q){
-                    return $q->where("plans.regional", 1);
-                });
+        if($request->regions){
+            if(str_contains($request->regions, "21")){
+                $plans=$plans->where("regional", 1);
             } else {
-                $plans=$plans->where(function($q){
-                    return $q->where("plans.regional", 0);
-                });
+                $plans=$plans->where("regional", 0);
             }
         }
         

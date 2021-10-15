@@ -37,6 +37,7 @@ class RegionsSeeder extends Seeder
             ["id" => 17, "name" => "LOS LAGOS", "code" => "XIV", "order" =>13],
             ["id" => 19, "name" => "AYSEN", "code" => "XI", "order" =>11],
             ["id" => 20, "name" => "MAGALLANES", "code" => "XII", "order" =>12],
+            ["id" => 21, "name" => "Regional", "code" => "", "order" =>16],
 
             
             // ["id" => 22, "name" => "METROPOLITANA PONIENTE", "code" => null],
