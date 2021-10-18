@@ -75,7 +75,7 @@ class SeekerController extends Controller
                 return $q->whereIn("plans.id", $plansIDs)->orWhere("plan_type_id", $plantTypes)->orWhere(function($q2) use ($request){
                     if($request->regions){
                         if(str_contains($request->regions, "21")){
-                            return $q2->where("plans.isapre_id", 3)->where("plans.regional", 1);
+                            return $q2->where("plans.isapre_id", 3)->whereIn("regional", $request->regions=="21" ? [1] : [0, 1]);
                         }
                     }
                     return $q2->orwhere("plans.national", 1);
@@ -86,7 +86,7 @@ class SeekerController extends Controller
 
         if($request->regions){
             if(str_contains($request->regions, "21")){
-                $plans=$plans->where("regional", 1);
+                $plans=$plans->whereIn("regional", $request->regions=="21" ? [1] : [0, 1]);
             } else {
                 $plans=$plans->where("regional", 0);
             }
